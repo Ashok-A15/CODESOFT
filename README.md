@@ -50,4 +50,16 @@ CodeSoftInternship_Level1/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/SoftInternship_Level1.git
+   git clone https://github.com/Ashok-A15/CODESOFT/tree/main
+
+
+License
+
+This repository is licensed under the MIT License.
+
+
+---
+
+If you want, I can also make a **fancier version with project GIF previews and badges** to make it stand out for internship recruiters.  
+
+Do you want me to do that?
