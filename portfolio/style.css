@@ -1,0 +1,162 @@
+/* General */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #0f172a; /* dark navy background */
+  color: #e2e8f0; /* light gray text */
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3a8a; /* deep blue */
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #facc15; /* gold */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #facc15; /* gold hover */
+}
+
+/* Hero Section */
+.hero {
+  height: 75vh;
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+              url('images/allu\ arjun.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.8rem; /* medium size */
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #facc15;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  font-style: italic;
+  color: #93c5fd; /* light blue */
+}
+
+/* Section Styles */
+section {
+  padding: 50px 10%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #facc15; /* gold headings */
+}
+
+#about img {
+  width: 300px;          /* wider for pill shape */
+  height: 150px;         /* shorter height */
+  border-radius: 75px;   /* makes it fully pill-shaped */
+  margin: 15px 0;
+  border: none;          /* no border / highlight */
+  object-fit: cover;     /* maintain image aspect ratio */
+}
+
+
+/* Skills */
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 8px 20px;
+  border: 2px solid #1e3a8a;
+  border-radius: 25px;
+  transition: background 0.3s;
+  color: #e2e8f0;
+}
+
+#skills ul li:hover {
+  background: #1e3a8a;
+  color: #facc15; /* gold hover text */
+}
+
+/* Projects */
+.project {
+  background: #1e293b; /* slate blue */
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.project h3 {
+  color: #93c5fd; /* light blue for project titles */
+}
+
+/* Resume */
+#resume a {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* blue gradient */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#resume a:hover {
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+  color: #facc15; /* gold hover text */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Contact */
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #1e293b;
+  color: #94a3b8; /* muted gray */
+  padding: 20px;
+  text-align: center;
+}
