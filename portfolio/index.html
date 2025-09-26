@@ -1,114 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allu Arjun | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John - Personal Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
 
   <!-- Header -->
-  <header>
-    <div class="logo">Allu Arjun</div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur">
+    <div class="container mx-auto px-4 flex h-14 items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="h-8 w-8 rounded-full bg-indigo-600"></div>
+        <span class="font-bold text-lg">John</span>
+      </div>
+
+      <nav id="main-nav" class="hidden md:flex space-x-6">
+        <a href="#about" class="text-sm font-medium hover:text-indigo-600 transition-colors">About</a>
+        <a href="#skills" class="text-sm font-medium hover:text-indigo-600 transition-colors">Skills</a>
+        <a href="#projects" class="text-sm font-medium hover:text-indigo-600 transition-colors">Projects</a>
+        <a href="#contact" class="text-sm font-medium hover:text-indigo-600 transition-colors">Contact</a>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden btn-outline text-sm" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+      <div class="px-4 py-3 flex flex-col space-y-2">
+        <a href="#about" class="text-sm font-medium hover:text-indigo-600">About</a>
+        <a href="#skills" class="text-sm font-medium hover:text-indigo-600">Skills</a>
+        <a href="#projects" class="text-sm font-medium hover:text-indigo-600">Projects</a>
+        <a href="#contact" class="text-sm font-medium hover:text-indigo-600">Contact</a>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Allu Arjun</h1>
-    <p>Actor | Dancer | Stylish Star</p>
-  </section>
+  <main class="container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center py-20 text-center">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">John</h1>
+      <p class="mt-4 max-w-2xl text-xl text-gray-600">Frontend Developer & UI/UX Designer</p>
+      <div class="mt-8 flex gap-4">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Hire Me</a>
+      </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="images/allu_arjun.jpg" alt="Allu Arjun Profile">
-    <p>
-      I am Allu Arjun, fondly known as the “Stylish Star” of Indian cinema. With a career spanning over two decades, I have appeared in numerous Telugu films, earning acclaim for my dynamic acting, exceptional dance skills, and unique style. My performances are marked by versatility, energy, and a deep connection with the audience, making me one of the most beloved actors in the industry.
+    <!-- About Section -->
+    <section id="about" class="py-16">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
+        <div class="flex justify-center">
+          <div class="h-64 w-64 overflow-hidden rounded-full">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+              alt="Professional headshot of John Doe, a web developer with a friendly expression"
+              class="h-full w-full object-cover"
+              onerror="this.src='https://via.placeholder.com/256?text=Profile'"
+            />
+          </div>
+        </div>
 
-Beyond acting, I am passionate about setting new benchmarks in entertainment, experimenting with diverse roles, and inspiring aspiring artists. I believe in constant learning and creativity, bringing innovation and dedication to every project I undertake. Off-screen, I engage in philanthropic efforts and advocate for social causes, striving to make a positive impact in society.
+        <div class="flex flex-col justify-center">
+          <h2 class="text-3xl font-bold mb-6">About Me</h2>
+          <p class="text-gray-600 mb-4">
+            I'm a passionate frontend developer with 3 years of experience creating responsive and
+            user-friendly web applications. I specialize in React, TypeScript, and modern CSS frameworks.
+          </p>
+          <p class="text-gray-600">
+            When I'm not coding, you can find me exploring new hiking trails, reading tech blogs,
+            or experimenting with new design tools. I believe in continuous learning and staying
+            updated with the latest web technologies.
+          </p>
+        </div>
+      </div>
+    </section>
 
-With a commitment to excellence and a love for storytelling, I continue to entertain, inspire, and connect with audiences across generations, leaving a lasting mark on cinema and culture.
-    </p>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="py-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card">
+          <h3 class="text-xl font-semibold mb-2">Frontend Development</h3>
+          <p class="text-gray-600">React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+          <p class="text-gray-600">Figma, Adobe XD, User Research, Wireframing, Prototyping</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-semibold mb-2">Backend Knowledge</h3>
+          <p class="text-gray-600">Node.js, Express, REST APIs, MongoDB, PostgreSQL</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-semibold mb-2">Tools & Technologies</h3>
+          <p class="text-gray-600">Git, GitHub, VS Code, Webpack, Docker, AWS</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Skills Section -->
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Acting</li>
-    <li>Dancing</li>
-    <li>Style & Fashion</li>
-    <li>Entertainment</li>
-    <li>Public Speaking</li>
-    <li>Action & Stunts</li>
-    <li>Fitness & Endurance</li>
-  </ul>
-</section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
+            alt="E-commerce website dashboard"
+            class="w-full h-48 object-cover"
+            onerror="this.src='https://via.placeholder.com/400x300?text=Project+1'"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-1">E-Commerce Dashboard</h3>
+            <p class="text-gray-600 mb-4">React-based admin dashboard with analytics</p>
+            <a href="#" class="btn-outline w-full">View Project</a>
+          </div>
+        </div>
 
-<!-- Projects Section -->
-<section id="projects">
-  <h2>Featured Movies</h2>
+        <div class="card overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
+            alt="Travel booking app"
+            class="w-full h-48 object-cover"
+            onerror="this.src='https://via.placeholder.com/400x300?text=Project+2'"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-1">Travel Booking App</h3>
+            <p class="text-gray-600 mb-4">Full-stack booking application with payments</p>
+            <a href="#" class="btn-outline w-full">View Project</a>
+          </div>
+        </div>
 
-  <div class="project">
-    <h3>Pushpa: The Rise (Pushpa 1)</h3>
-    <p>
-      Released: 2021 | Language: Telugu | Genre: Action/Drama  
-      Allu Arjun plays Pushpa Raj, a red sandalwood smuggler in Seshachalam forests.  
-      Known for his rugged look, signature dance moves, and powerful action sequences,  
-      the film became a blockbuster and earned Allu Arjun massive acclaim.
-    </p>
-  </div>
+        <div class="card overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+            alt="Fitness tracker app"
+            class="w-full h-48 object-cover"
+            onerror="this.src='https://via.placeholder.com/400x300?text=Project+3'"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-1">Fitness Tracker</h3>
+            <p class="text-gray-600 mb-4">Mobile app with workout plans and tracking</p>
+            <a href="#" class="btn-outline w-full">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="project">
-    <h3>Pushpa: The Rule (Pushpa 2)</h3>
-    <p>
-      Release: Upcoming | Language: Telugu | Genre: Action/Drama  
-      The continuation of Pushpa: The Rise, featuring Pushpa Raj navigating higher stakes  
-      in the red sandalwood trade. Fans are eagerly waiting for Allu Arjun’s style, action,  
-      and charisma in this highly anticipated sequel.
-    </p>
-  </div>
+    <!-- Resume Section -->
+    <section class="py-16 bg-gray-100 rounded-lg">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold mb-6">My Resume</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+          Download my resume to learn more about my experience and background.
+        </p>
+        <a href="allu arjun.pdf" download class="btn-accent inline-block">Download Resume (PDF)</a>
+      </div>
+    </section>
 
-  <div class="project">
-    <h3>Ala Vaikunthapurramuloo</h3>
-    <p>
-      Released: 2020 | Language: Telugu | Genre: Family/Comedy/Action  
-      Allu Arjun plays Bantu, a fun-loving and stylish man with a twist in his family story.  
-      The film was a massive hit for its catchy songs, comedy, emotional storyline,  
-      and Allu Arjun's charismatic performance.
-    </p>
-  </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+          <div class="space-y-4">
+            <div>
+              <p class="font-medium">Email</p>
+              <p class="text-gray-600">john.doe@example.com</p>
+            </div>
+            <div>
+              <p class="font-medium">Phone</p>
+              <p class="text-gray-600">+1 (555) 123-4567</p>
+            </div>
+            <div>
+              <p class="font-medium">Location</p>
+              <p class="text-gray-600">San Francisco, CA</p>
+            </div>
+          </div>
+        </div>
 
-</section>
-
-
-  <!-- Resume Section -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="allu arjun.pdf" download>Download Resume (PDF)</a>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: stylishstar@allu.com</p>
-    <p>Phone: +91 9876543210/p>
-  </section>
+        <div>
+          <form class="space-y-4" onsubmit="alert('Message sent! (Demo)'); return false;">
+            <div class="space-y-2">
+              <label for="name" class="block text-sm font-medium">Name</label>
+              <input type="text" id="name" required placeholder="Your name" class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="block text-sm font-medium">Email</label>
+              <input type="email" id="email" required placeholder="your.email@example.com" class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="space-y-2">
+              <label for="message" class="block text-sm font-medium">Message</label>
+              <textarea id="message" rows="5" required placeholder="Tell me about your project..." class="w-full p-2 border border-gray-300 rounded"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Allu Arjun. All rights reserved.</p>
+  <footer class="border-t py-8 bg-white">
+    <div class="container mx-auto px-4 flex flex-col items-center justify-between gap-4 md:flex-row">
+      <p class="text-center text-sm text-gray-600 md:text-left">
+        &copy; <span id="year"></span> John Doe. All rights reserved.
+      </p>
+      <div class="flex space-x-4">
+        <a href="#" class="text-sm text-gray-600 hover:text-gray-900"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#" class="text-sm text-gray-600 hover:text-gray-900"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#" class="text-sm text-gray-600 hover:text-gray-900"><i class="fab fa-twitter"></i> Twitter</a>
+      </div>
+    </div>
   </footer>
 
+  <!-- Your script -->
+  <script src="script.js"></script>
 </body>
 </html>
