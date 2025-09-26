@@ -37,4 +37,17 @@ This repository contains **three projects** completed as part of my **Soft Inter
 ---
 
 ## Folder Structure
+CodeSoftInternship_Level1/
+│
+├── PortfolioWebsite/
+├── LandingPage/
+└── Calculator/
 
+
+---
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/SoftInternship_Level1.git
